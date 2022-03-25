@@ -1,0 +1,105 @@
+.section5
+	position: relative 
+
+.skills_box_wrapper 
+	position: relative
+	// display: flex 
+	// align-items: center 
+	// justify-content: center
+	
+	&:first-child 
+		.skills_box 
+			background: $pink 
+			margin-right: 5%
+			&::before
+				border-color: $dark_pink
+
+	&:last-child 
+		.skills_box 
+			background: $green
+			margin-left: 5%
+			&::before
+				border-color: $dark_green
+
+
+.skills_box 
+	position: relative
+	width: 95% 
+	padding: 80px 
+	// padding-right: 30px
+	height: 100%
+	min-height: 490px
+	border-radius: 110px
+	// overflow: hidden
+	&::before 
+		content: ""
+		position: absolute
+		left: 15px
+		top: -15px
+		width: 100% 
+		height: 100%
+		background-color: transparent!important
+		border-width: 1px 
+		border-style: solid 
+		border-radius: 110px
+		transition: .9s
+	img 
+		display: block 
+		width: 50px 
+		height: auto 
+
+.skills_text
+	h3, ul, p
+		position: relative
+		-webkit-transition: all 0.3s
+		-moz-transition: all 0.3s
+		-o-transition: all 0.3s
+		transition: all 0.3s
+		color: #fff
+
+	h3 
+		padding: 40px 0
+		width: 100%
+		font-family: $font_title
+		font-size: calc(21px + 21 * ( (100vw - 320px) / 1200))
+
+	ul
+		padding: 0
+		list-style: url('../img/item_pointer.svg')
+		list-style-position: inside
+		font-family: $font_main
+		line-height: 2
+		font-size: calc(11px + 11 * ( (100vw - 320px) / 1200))
+		letter-spacing: 2px
+		li 
+			padding-bottom: 15px
+
+
+	p
+		padding: 40px 0 0
+		font-size: calc(21px + 21 * ( (100vw - 320px) / 1200))
+		letter-spacing: 2px
+		font-family: $font_main
+		text-align: center
+
+@media screen and (min-width: 961px) 
+	.skills_text
+		h3, p
+			font-size: 42px
+		ul 
+			font-size: 22px
+		
+
+@media screen and (min-width: 1201px)
+	.skills_text
+		h3, p
+			font-size: 50px
+		ul 
+			font-size: 22px
+
+::marker
+	margin-right: 15px
+
+
+
+			

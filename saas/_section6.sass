@@ -1,0 +1,53 @@
+.section6
+	position: relative
+	
+	.container
+		background: url(../img/sec6_bg.svg) no-repeat 90% 100% 
+		background-size: 0% auto 
+		animation: 1s 1 normal scaling3
+		animation-timing-function: ease-in-out
+		animation-fill-mode: both 
+		animation-delay: 0 
+		transform-origin: bottom center
+
+.girl_sec6_wrap
+	position: relative 
+	&::before
+		content: ""
+		position: absolute 
+		right: 5%
+		top: 0 
+		width: 150% 
+		height: 100% 
+		background: url(../img/education_girl_img.svg) no-repeat 100% 50% 
+		background-size: contain
+		overflow: visible
+
+.edu, .edu_small
+	font-family: $font_main
+	letter-spacing: 2px
+
+.edu
+	font-size: calc(11px + 11 * ( (100vw - 320px) / 1200))
+
+.edu_small
+	font-size: calc(9px + 9 * ( (100vw - 320px) / 1200))
+
+.btn_wrap 
+	text-align: center
+
+@media screen and (min-width: 961px) 
+	.edu
+		font-size: 22px
+	.edu_small
+		font-size: 18px	
+
+@media screen and (min-width: 1201px)
+	.edu
+		font-size: 22px
+
+	.edu_small
+		font-size: 18px
+
+.edu_row 
+	padding-bottom: 15px
